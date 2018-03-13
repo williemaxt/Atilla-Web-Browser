@@ -1,0 +1,45 @@
+input{
+  width: 80%;
+  margin: auto 0;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  background: #888888;
+  color: #ffffff;
+  height: 20px;
+  clear: both;
+}
+nav{
+  background: #333333;
+    padding: 10px;
+}
+body{
+  margin: 0;
+}
+webview{
+  min-height: 95vh;
+  min-width: 100vw;
+}
+.navIcons{
+  list-style: none;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.navIcons img{
+  display: inline-block;
+  width: 15px;
+  height: auto;
+  margin-top: 0;
+  margin-right: 30px;
+  padding: 3px;
+  border-radius: 3px;
+}
+.navIcons img:hover{
+  background: #808080;
+  transition: .4s;
+}
+#navigation{
+  padding: 0;
+  margin: 0;
+}
