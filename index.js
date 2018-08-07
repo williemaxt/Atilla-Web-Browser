@@ -1,4 +1,5 @@
-
+/*WebView*/
+var webvw = document.getElementById('webview');
 
 /*Button group*/
 //go Button
@@ -9,26 +10,28 @@ var refresh = document.getElementById('refresh');
 var forward = document.getElementById('forward');
 //back button
 var back = document.getElementById('back');
-
+//Address Bar
+var adrsBar = document.getElementById('adrsBar');
 
 /*Browser Functions*/
-//go to page
+//go to an address
 go.addEventListener('click', function(event){
-  //Address Bar
-  var adrsBar = document.getElementById('adrsBar');
-  //WebView
-  var webvw = document.getElementById('webview');
-  //sets he source of the webview by converting the
+  //sets the source of the webview by converting the
   //input into a string
   webvw.src = "http://"+adrsBar.value.toString();
 });
 
-// TODO: Add webview as a global variable for
-//functions below
+//This will go to an address when the enter key has been pressed
+document.addEventListener('keypress', (event) => {
+    const keyName = event.key;
+    if(keyName === "Enter"){
+        webvw.src = "http://"+adrsBar.value.toString();
+    }
+});
 
 //refresh page
 refresh.addEventListener('click', function(event){
-  webvvw.reload();
+  webvw.reload();
 });
 
 //go back
@@ -36,7 +39,7 @@ back.addEventListener('click', function(event){
   webvw.goBack();
 });
 
-//go foward
+//go forward
 forward.addEventListener('click', function(event){
-  webvw.goFoward();
+  webvw.goForward();
 });
